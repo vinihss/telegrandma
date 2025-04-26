@@ -1,0 +1,14 @@
+[2025-04-13T00:20:56-03:00] Script: ⣾  Loading⣽  Loading⣻  Loading⢿  Loading⡿  Loading⣟  Loading⣯  Loading⣷  Loading⣾  Loading⣽  Loading⣻  Loading⢿  Loading⡿  Loading⣟  Loading⣯  Loading          
+bash
+journalctl --since "1 hour ago" | less
+```
+
+This command will display the system logs from the last hour using journalctl, which is the default logging system on Arch Linux. The output is piped to less for easier navigation through the log entries.
+
+
+Output: bash: linha 1: $'\r⣾': comando não encontrado
+bash: linha 3: less: comando não encontrado
+bash: -c: linha 4: encontrado EOF inesperado enquanto procurava por ``' correspondente
+
+Executed: false
+
