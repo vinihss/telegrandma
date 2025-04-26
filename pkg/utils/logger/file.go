@@ -25,6 +25,3 @@ func start() {
 	log.SetOutput(logFile)
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 }
-func init() {
-
-}

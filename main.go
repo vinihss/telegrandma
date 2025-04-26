@@ -1,16 +1,24 @@
 package main
 
 import (
-	"telegrandma/cmd"
-	"telegrandma/internal/application"
+	"github.com/vinihss/telegrandma/cmd"
+	"github.com/vinihss/telegrandma/internal/application"
 )
 
-var app = application.NewApplication("telegrandma", "telegrandma - Remote Server Manager CLI")
+var app = application.NewApplication(
+	"telegrandma",
+	"telegrandma - Remote Server Manager CLI",
+)
 
 func main() {
-	app.Run()
+
+	err := app.Run()
+	if err != nil {
+		return
+	}
 	app.SetProcess(func() {
-		cmd.cmd.Execute()
+
+		cmd.Execute()
 	})
 
 }

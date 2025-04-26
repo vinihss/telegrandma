@@ -1,10 +1,9 @@
 package cmd
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
-	"telegrandma/internal/conversation"
-	"telegrandma/pkg/cmd/cli"
+	"github.com/vinihss/telegrandma/internal/conversation"
+	"github.com/vinihss/telegrandma/pkg/cmd/cli"
 )
 
 type CommandSettings struct {
@@ -14,7 +13,6 @@ type CommandSettings struct {
 	RunAction        func()
 }
 
-var AvailableAgents = []string{"gpt3"}
 var chatCmd = cli.BaseCommand("chat", "Manage chatbots")
 
 var start = &cobra.Command{
@@ -24,26 +22,9 @@ var start = &cobra.Command{
 		conversation.InitializeBot()
 	},
 }
-var chatList = &cobra.Command{
-	Use:   "list",
-	Short: "List all available agents",
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print("implements lost")
-
-	},
-}
-
-var setup = &cobra.Command{
-	Use:   "init",
-	Short: "Init chatbot settings",
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Print("implements lost")
-	},
-}
 
 func init() {
 
-	chatCmd.AddCommand(setup)
 	chatCmd.AddCommand(start)
 	rootCmd.AddCommand(chatCmd)
 }

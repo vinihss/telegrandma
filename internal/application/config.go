@@ -84,6 +84,7 @@ func initLogger(cfg *AppConfig) (*os.File, error) {
 	return logFile, nil
 }
 
+/*
 func init() {
 	// Obtém configuração padrão baseada no SO
 	cfg, err := getDefaultConfig()
@@ -104,3 +105,4 @@ func init() {
 	defer logFile.Close()
 
 }
+*/

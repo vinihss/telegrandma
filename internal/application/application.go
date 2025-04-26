@@ -3,7 +3,7 @@ package application
 import (
 	"fmt"
 
-	"telegrandma/pkg/cmd/cli"
+	"github.com/vinihss/telegrandma/pkg/cmd/cli"
 )
 
 type Application struct {
@@ -15,18 +15,7 @@ type Application struct {
 
 // PrintASCIIArt prints an ASCII art during application startup
 func (app *Application) PrintASCIIArt() {
-	fmt.Println(`
-   _____  _	 _  _____
-  / ____|| |   (_)/ ____|
- | (___  | |__  _| |  __
-  \___ \ | '_ \| | | |_ |
-  ____) || | | | | |__| |
- |_____/ |_| |_|_|\_____|
-
---------------------------------
-ShipX - Remote Server Manager CLI
---------------------------------
-	`)
+	fmt.Println(``)
 }
 
 // Run sets up the root command and displays ASCII art

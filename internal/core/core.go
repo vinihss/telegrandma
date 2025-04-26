@@ -4,7 +4,6 @@ import (
 	"fmt"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"log"
-	"os"
 	"os/exec"
 	"sync"
 	"time"
@@ -23,20 +22,12 @@ type task struct {
 // Logger instance for the application
 var logger *log.Logger
 
-func init() {
-	// Initialize the logger
-	file, err := os.OpenFile("motherbot.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		fmt.Printf("Error creating log file: %v\n", err)
-		return
-	}
-	logger = log.New(file, "motherbot: ", log.Ldate|log.Ltime|log.Lshortfile)
-}
-
 func LogInfo(message string) {
 	if logger != nil {
+
 		logger.Println("INFO: " + message)
 	}
+	log.Printf(message)
 }
 
 func LogError(err error) {

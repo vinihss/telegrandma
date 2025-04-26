@@ -2,10 +2,9 @@ package conversation
 
 import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+	"github.com/vinihss/telegrandma/internal/core"
 	"log"
-	"os"
 	"sync"
-	"telegrandma/internal/core"
 	"time"
 )
 
@@ -31,7 +30,7 @@ type Chat struct {
 func InitializeBot() {
 	core.LogInfo("InitializeBot")
 	settings := BotSettings{
-		Token:         os.Getenv("TELEGRAM_API_TOKEN"),
+		Token:         "7247685011:AAFuiFFEVJ--RyY52umhhRNYZ5-0lZZmBEs",
 		Debug:         false,
 		UpdateOffset:  0,
 		UpdateTimeout: 60,
